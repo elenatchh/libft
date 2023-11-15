@@ -6,11 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:11:06 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/08 12:13:08 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:23:10 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isspace(int c)
+int	ft_isspace(int c)
 {
-    return (c >= 0 && c < 33 || c = 127); 
+	return (c >= 0 && c < 33 || c = 127);
 }

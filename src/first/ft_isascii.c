@@ -6,11 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:11:48 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/08 12:06:54 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:22:22 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (c >= 0 && c  < 128);
+	return (c >= 0 && c < 128);
 }

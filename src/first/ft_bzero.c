@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 13:26:54 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:26:44 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/15 10:54:53 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/15 11:08:50 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	bzero(void *s, size_t n)
 {
+	char	*str;
 	size_t	i;
-	size_t	size_src;
-	size_t	size_dst;
 
-	size_src = ft_strlen(src);
-	size_dst = ft_strlen(dst);
+	str = (char *)s;
 	i = 0;
-	if (!size)
-		return (size_src);
-	if (size_dst >= size)
-		return (size_src + size);
-	while (src[i] && (size_dst + i < size - 1))
+
+	while (i < n)
 	{
-		dst[size_dst + i] = src[i];
+		str[i] = '\0';
 		i++;
 	}
-	dst[size_dst + i] = '\0';
-	if (size_dst > size)
-		return (size + size_src);
-	else
-		return (size_src + size_dst);
+}
+int main()
+{
+	
 }

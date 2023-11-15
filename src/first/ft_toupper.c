@@ -6,13 +6,13 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:38:24 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/10 10:43:11 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:58:22 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        c -= 32;
-    return (c);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

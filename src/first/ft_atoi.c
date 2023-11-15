@@ -6,7 +6,7 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:45:49 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/10 11:14:01 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:20:58 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,4 @@ int	ft_atoi(char *str)
 		i++;
 	}
 	return (nb * neg);
-}
-/*
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	printf("%d", ft_atoi(av[1]));
-	return ac;
 }

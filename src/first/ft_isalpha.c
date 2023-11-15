@@ -6,11 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:11:37 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/08 12:09:05 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:21:36 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    return (c >= 65 && c  < 91);
+	return (c >= 65 && c < 91);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 10:43:42 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:57:49 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/10 10:49:43 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/15 13:58:44 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include <unistd.h> 
+
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	write(fd, &c, 1);
 }

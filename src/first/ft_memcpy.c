@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 10:49:43 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/10 10:52:00 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/15 11:14:45 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/15 12:59:17 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h> 
-
-void ft_putchar_fd(char c, int fd)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    write(fd, &c, 1);
+	char	*s;
+	char	*d;
+	size_t	i;
+
+	i = 0;
+	s = (char *) src;
+	d = (char *) dest;
+
+	if (&src[0] == dest)
+		return (dest);
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
 }

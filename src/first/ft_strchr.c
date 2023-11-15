@@ -6,14 +6,22 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:38:12 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/10 13:43:21 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:23:35 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *str, int c);
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	size_t	i;
 
-    i = 0;
-    if (str[i])
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return ((char *)s + i);
+		i++;
+	}
+	if (!c && s[i] == '\0')
+		return ((char *)s + i);
+	return (NULL);
 }

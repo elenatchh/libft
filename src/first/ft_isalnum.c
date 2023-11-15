@@ -6,11 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:11:21 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/08 12:14:11 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:20:44 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int isalnum(int c)
+int	ft_isalnum(int c)
 {
-    return ( c >= 48 && c < 91);
+	return (c >= 48 && c < 91);
 }

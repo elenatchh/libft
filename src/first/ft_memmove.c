@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 13:26:54 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:26:44 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/15 11:28:26 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/15 11:51:07 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	char	*s;
+	char	*d;
 	size_t	i;
-	size_t	size_src;
-	size_t	size_dst;
 
-	size_src = ft_strlen(src);
-	size_dst = ft_strlen(dst);
 	i = 0;
-	if (!size)
-		return (size_src);
-	if (size_dst >= size)
-		return (size_src + size);
-	while (src[i] && (size_dst + i < size - 1))
+	s = (char *) src;
+	d = (char *) dest;
+	if (&src[0] == dest)
+		return (dest);
+	if (&src[0] < dest)
 	{
-		dst[size_dst + i] = src[i];
-		i++;
+		while (n-- != 0)
+			d[n] = s[n];
 	}
-	dst[size_dst + i] = '\0';
-	if (size_dst > size)
-		return (size + size_src);
 	else
-		return (size_src + size_dst);
+	{
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dest);
 }
