@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 10:54:53 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/20 09:51:59 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/20 14:13:58 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/20 14:40:50 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*str;
-	size_t	i;
+	int	a;
+    int b;
 
-	str = (char *)s;
-	i = 0;
-
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+    a = 0;
+    b = 0;
+    while (big[b] && little[a])
+    {
+        if (little[a + b] == big[b])
+        b++;
+        else
+        {
+            a++;
+            b = 0;
+        }
+    }
+    if (big[b] == '\0')
+        return (&little[a]);
+    else
+        return (0);
 }

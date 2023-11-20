@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 10:54:53 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/20 09:51:59 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/20 09:53:01 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/20 14:22:19 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n )
 {
-	char	*str;
+	char	*str1;
+	char	*str2;
 	size_t	i;
 
-	str = (char *)s;
+	str1 = (char *) s1;
+	str2 = (char *) s2;
 	i = 0;
-
 	while (i < n)
 	{
-		str[i] = '\0';
-		i++;
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 	}
+	return (0);
 }

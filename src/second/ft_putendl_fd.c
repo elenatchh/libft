@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 10:54:53 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/20 09:51:59 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/20 10:05:30 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/20 10:08:15 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+void	ft_putendl_fd(char *str, int fd)
 {
-	char	*str;
-	size_t	i;
+	int	i;
 
-	str = (char *)s;
 	i = 0;
-
-	while (i < n)
+	while (str[i] != '\0')
 	{
-		str[i] = '\0';
+		write(fd, &str[i], 1);
 		i++;
 	}
+	write(fd, "\n", 1);
 }

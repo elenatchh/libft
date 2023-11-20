@@ -6,7 +6,7 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:38:12 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:23:35 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/11/20 13:16:10 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return ((char *)s + i);
+		{
+			return (s + i);
+		}
 		i++;
 	}
-	if (!c && s[i] == '\0')
-		return ((char *)s + i);
 	return (NULL);
 }
