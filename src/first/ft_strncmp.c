@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 10:40:52 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/22 18:16:55 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/22 14:58:24 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/22 15:22:58 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-    unsigned int	i;
+	size_t	i;
 
-	i = 0;
-	if (!s || !f)
-		return (NULL);
-	while (s[i])
+	i = 0 ;
+	if (n == 0)
+		return (0);
+	while (s1[i] != '\0' && s1[i] == s2[i] && i < n -1)
 	{
-		f(i, s + i);
 		i++;
 	}
+	return (s1[i] - s2[i]);
 }

@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 10:40:52 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/22 18:16:55 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/23 11:50:52 by elefonta          #+#    #+#             */
+/*   Updated: 2023/11/23 14:47:30 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include "unistd.h"
+#include "stdlib.h"
+
+int	ft_strlen(char const *str);
+void	ft_memset(void *ptr, int value, size_t num);
+
+char	*ft_strdup(char const *str)
 {
-    unsigned int	i;
+	int		i;
+	char	*ret;
 
 	i = 0;
-	if (!s || !f)
+	if (!str)
 		return (NULL);
-	while (s[i])
+	ret = malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (!ret)
+		return (NULL);
+	ft_memset(ret, 0, ft_strlen(str) + 1);
+	while (str[i])
 	{
-		f(i, s + i);
+		ret[i] = str[i];
 		i++;
 	}
+	return (ret);
 }
