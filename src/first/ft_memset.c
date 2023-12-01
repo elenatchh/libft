@@ -6,12 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 13:42:37 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/23 12:56:55 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:27:03 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
-#include "stdlib.h"
+#include "libft.h"
 
 void	ft_memset(void *ptr, int value, size_t num)
 {

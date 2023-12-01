@@ -6,19 +6,13 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 10:45:19 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/23 14:59:17 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:30:09 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
-#include "stdlib.h"
-#include "stdio.h"
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t num);
-int	ft_strlen(char const *str);
-char *ft_strdup(char const *str);
-
-void 	git t_nettoyage(char **tab)
+void 	ft_nettoyage(char **tab)
 {
 	int	i;
 

@@ -6,10 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 12:57:55 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/20 13:15:17 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:25:46 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 void	*memchr(const void *s, int c, size_t n)
 {

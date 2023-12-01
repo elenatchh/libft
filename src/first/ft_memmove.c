@@ -6,9 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:28:26 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 11:51:07 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:26:28 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

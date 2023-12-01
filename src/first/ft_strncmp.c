@@ -6,9 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 14:58:24 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/22 15:22:58 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:28:05 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {

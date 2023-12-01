@@ -6,9 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 10:54:53 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/20 09:51:59 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:25:06 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	bzero(void *s, size_t n)
 {

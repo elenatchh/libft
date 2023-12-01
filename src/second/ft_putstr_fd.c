@@ -6,11 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:49:14 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:58:57 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:29:06 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr(char *str, int fd)
 {

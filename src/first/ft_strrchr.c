@@ -6,14 +6,18 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:56:53 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/22 15:30:16 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:28:25 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*str;
 
+	str = (unsigned char *) s;
 	i = ft_strlen(s);
 	if (c == 0)
 		return ((char *)s + i);

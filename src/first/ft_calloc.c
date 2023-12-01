@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 09:53:01 by elefonta          #+#    #+#             */
-/*   Updated: 2023/12/01 12:25:52 by elefonta         ###   ########.fr       */
+/*   Created: 2023/12/01 15:06:28 by elefonta          #+#    #+#             */
+/*   Updated: 2023/12/01 15:08:12 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n )
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	*str1;
-	char	*str2;
-	size_t	i;
+	void	*ptr;
+	size_t	n;
 
-	str1 = (char *) s1;
-	str2 = (char *) s2;
-	i = 0;
-	while (i < n)
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-	}
-	return (0);
+	n = count * size;
+	if (n && (size != n / count))
+		return (NULL);
+	ptr = malloc(n);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, n);
+	return (ptr);
 }

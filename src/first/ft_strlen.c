@@ -6,11 +6,13 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:57:20 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/23 14:41:16 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:32:35 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

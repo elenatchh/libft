@@ -6,14 +6,12 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:50:52 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/23 14:47:30 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:27:39 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
-#include "stdlib.h"
+#include "libft.h"
 
-int	ft_strlen(char const *str);
 void	ft_memset(void *ptr, int value, size_t num);
 
 char	*ft_strdup(char const *str)

@@ -6,9 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:43:42 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:57:49 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:28:29 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

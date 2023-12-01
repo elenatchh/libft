@@ -6,9 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 11:14:45 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 12:59:17 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:26:22 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

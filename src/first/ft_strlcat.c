@@ -6,9 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:26:54 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:26:44 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:27:48 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

@@ -6,10 +6,11 @@
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 10:45:49 by elefonta          #+#    #+#             */
-/*   Updated: 2023/11/15 13:20:58 by elefonta         ###   ########.fr       */
+/*   Updated: 2023/12/01 12:24:56 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
