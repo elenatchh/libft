@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 11:14:45 by elefonta          #+#    #+#             */
-/*   Updated: 2023/12/01 12:26:22 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/07 12:11:37 by elefonta          #+#    #+#             */
+/*   Updated: 2023/12/16 11:58:06 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_isalpha(int c)
 {
-	char	*s;
-	char	*d;
-	size_t	i;
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+}
+/*#include <ctype.h>
+#include <stdio.h>
 
-	i = 0;
-	s = (char *) src;
-	d = (char *) dest;
-
-	if (&src[0] == dest)
-		return (dest);
-	while (i < n)
+int	main(void)
+{
+	for (int i = 0; i < 127; i++)
 	{
-		d[i] = s[i];
-		i++;
+		if (ft_isalpha(i) == isalpha(i))
+			printf("OK\n");
+		else
+			printf("NOT OK\n char = %c\n ft_isalpha tells %i\n but isalpha tells
+				%i\n", i, ft_isalpha(i), isalpha(i));
 	}
 }
+*/

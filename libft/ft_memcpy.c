@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 11:50:52 by elefonta          #+#    #+#             */
-/*   Updated: 2023/12/01 12:27:39 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/15 11:14:45 by elefonta          #+#    #+#             */
+/*   Updated: 2023/12/07 14:48:00 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memset(void *ptr, int value, size_t num);
-
-char	*ft_strdup(char const *str)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int		i;
-	char	*ret;
+	char	*s;
+	char	*d;
+	size_t	i;
 
 	i = 0;
-	if (!str)
-		return (NULL);
-	ret = malloc(sizeof(char) * ft_strlen(str) + 1);
-	if (!ret)
-		return (NULL);
-	ft_memset(ret, 0, ft_strlen(str) + 1);
-	while (str[i])
+	s = (char *) src;
+	d = (char *) dest;
+	if (&src[0] == dest)
+		return (dest);
+	while (i < n)
 	{
-		ret[i] = str[i];
+		d[i] = s[i];
 		i++;
 	}
-	return (ret);
+	return (dest);
 }

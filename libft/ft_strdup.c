@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 14:53:38 by elefonta          #+#    #+#             */
-/*   Updated: 2023/12/01 12:29:17 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/23 11:50:52 by elefonta          #+#    #+#             */
+/*   Updated: 2023/12/10 16:26:25 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb, int fd)
+char	*ft_strdup(char const *str)
 {
-	if (nb == -2147483648)
+	int		i;
+	char	*ret;
+
+	i = 0;
+	if (!str)
+		return (NULL);
+	ret = malloc(sizeof(char) * (ft_strlen(str) + 1));
+	if (!ret)
+		return (NULL);
+	ft_memset(ret, 0, ft_strlen(str) + 1);
+	while (str[i])
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		ret[i] = str[i];
+		i++;
 	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb <= 9)
-		ft_putchar(nb + '0');
-	else
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
+	return (ret);
 }

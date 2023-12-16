@@ -1,20 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elefonta <elefonta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 10:43:42 by elefonta          #+#    #+#             */
-/*   Updated: 2023/12/01 12:28:29 by elefonta         ###   ########.fr       */
+/*   Created: 2023/11/10 14:56:53 by elefonta          #+#    #+#             */
+/*   Updated: 2023/12/16 12:09:10 by elefonta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	int				i;
+	unsigned char	*str;
+
+	str = (unsigned char *) s;
+	i = ft_strlen(s);
+	if (c == 0)
+		return ((char *)s + i);
+	while (i >= 0)
+	{
+		if (s[i] == (unsigned char)c)
+		{
+			return ((char *)s + i);
+		}
+		i--;
+	}
+	return (NULL);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char str[] = "bonjour";
+	printf("%s\n", ft_strrchr(str, 's'));
+}
+*/
